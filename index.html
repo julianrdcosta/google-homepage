@@ -10,7 +10,8 @@
             padding: 5px 0px 25px 0px;
             display:grid;
             justify-content: right;
-            grid-template-columns: repeat(4, 50px);
+            grid-template-columns: repeat(4, 60px);
+            
         }
         .navicon, .usericon, .bento-menu {
             align-self: center;
@@ -32,7 +33,9 @@
             background:#000000;
             overflow: hidden;
         }
-        body {background-color: #ffffff;}
+        body {background-color: #ffffff;
+            font-family: Arial;
+        }
         img {margin: auto;}
         .main {
             display: grid;
@@ -55,28 +58,33 @@
             align-self: center;
             margin: auto;
             grid-template-columns: 140px 140px;
-            grid-gap: 5px;
+            grid-gap: 15px;
             padding-top: 5px;
             
         }
         button {
-            border-color: rgb(250, 250, 250);
-            background-color:#edecf0;
-            height : 30px;
+            border-color: rgb(233, 232, 232);
+            background-color:#f1f4f5;
+            height : 35px;
             border-radius: 5px;
             border-style: solid;
         }
         #searchbox{
             display: grid;
             align-self: center;
-            width: 350px;
-            height: 30px;
-            border-color: rgb(158, 157, 157);
+            align-items: center;
+            width: 650px;
+            height : 45px;
+            border-color: rgb(207, 206, 206);
             background-color:#ffffff;
-            height : 30px;
+            
             border-radius: 50px;
             border-style: solid;
             border-width: thin;
+            margin-bottom: 35px;
+        }
+        #searchbox:hover {
+            box-shadow: 0px 0px 5px 0px #ccc;
         }
         #searchbar{
             -webkit-appearance: none;
@@ -85,6 +93,62 @@
             border: none;
             border-color: rgb(245, 245, 245);
         }
+        input {all:unset;
+            align-self: center;}
+        #logo {
+            text-align: center;
+            padding-bottom: 20px;
+        }
+        #logo img {
+            
+            height: 100px;
+        }
+        .country {
+            color: grey;
+            background-color: rgb(245, 245, 245);
+            display: grid;
+            position: absolute; 
+            padding-left: 20px;
+            align-items:center;
+            left: 0 ; right: 0; bottom: 50px; 
+            height:50px; 
+            grid-template-columns: repeat(2, 1fr);
+            
+        }
+        footer {
+            background-color: rgb(245, 245, 245);
+            color: grey;
+            display: grid;
+            position: absolute; 
+            border-style: solid;
+            border-color: rgb(206, 205, 205);
+            border-width: thin;
+            left: 0 ; right: 0; bottom: 0; 
+            height:50px; 
+            grid-template-columns: 2fr 1fr;
+            grid-gap: 20px;
+            align-items:center;
+            
+        }
+        footer .footer-left {
+            display: grid;
+            grid-template-columns: 100px 100px 100px 100px;
+            justify-content: left;
+            grid-gap: 10px;
+            padding-left: 200px;
+            padding-right: 200px;
+            white-space: nowrap;
+            
+            
+        }
+        footer .footer-right {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            justify-content: right;
+            padding-left: 100px;
+            padding-right: 100px;
+        }
+
     </style>
 </head>
 <body>
@@ -107,7 +171,7 @@
         <div  class="navicon" id="usericon">J</div>
     </nav>
     <section class="main">
-        <div style="text-align: center;"><img  src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google Logo"></div>
+        <div id="logo"><img  src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google Logo"></div>
         <div id="searchbox">
             <form >
                 <input type="text" id="searchbar" name="searchbar">
@@ -119,6 +183,22 @@
         </div>
        
     </section>
+    <div class="country">India</div>
+    <footer>
+        
+        <div class="footer-left">
+            <div style="justify-self: justified;">About</div>
+            <div style="justify-self: justified;">Advertising</div>
+            <div style="justify-self: justified;">Business</div>
+            <div style="justify-self: justified;">How Search works</div>
+        </div>
+        <div class="footer-right">
+            <div>Privacy</div>
+            <div>Terms</div>
+            <div>Settings</div>
+        </div>
+
+    </footer>
     
 </body>
 </html>
